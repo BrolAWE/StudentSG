@@ -1,5 +1,6 @@
 from django.db import models
 import cloudinary.models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -19,6 +20,8 @@ class Post(models.Model):
     code = models.CharField(max_length=3, help_text="Пример заполнения: <em>001</em>.",
                             verbose_name="Код новости", primary_key=True)
     image = cloudinary.models.CloudinaryField('картинка', blank=True, null=True)
+    title = models.TextField(verbose_name="Заголовок новости", blank=True, null=True)
+    body = models.TextField(verbose_name="Содержание новости", blank=True, null=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
     class Meta:
