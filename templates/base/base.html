@@ -10,7 +10,9 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Панель навигации</a>
+    <a class="navbar-brand" href="{% url "index" %}">
+        <img src="{% static "img/logo_text_1.svg" %}" width="30" height="30" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
         <span class="navbar-toggler-icon"></span>
@@ -18,25 +20,84 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">О конкурсе</a>
+                <a class="nav-link" href="{% url "about" %}">О конкурсе</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Новости</a>
+                <a class="nav-link" href="{% url "news" %}">Новости</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Контакты</a>
+                <a class="nav-link" href="{% url "contacts" %}">Контакты</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Вопрос-ответ</a>
+                <a class="nav-link" href="{% url "questions" %}">Вопрос-ответ</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Регистрация</a>
+                <a class="nav-link" href="{% url "registration" %}">Регистрация</a>
             </li>
         </ul>
     </div>
 </nav>
 
 {% block content %}{% endblock %}
+
+<!-- Подвал -->
+<footer class="page-footer mt-3 footer-font font-weight-bold">
+
+    <!-- Footer Elements -->
+    <div class="container-fluid">
+
+        <div class="row text-center d-flex justify-content-between align-items-center">
+            <div class="col-lg-2 col-md-12">
+                <img src="{% static 'img/logo_text_1.svg' %}" width="88" height="70"
+                     class="d-inline-block align-top"
+                     alt="">
+            </div>
+            <div class="col-lg-2 col-md-12 pt-lg-0 pt-3">
+                <a class="mx-3 text-dark" role="button" href="{% url "about"%}">
+                    О конкурсе
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-12 pt-lg-0 pt-3">
+                <a class="mx-3 text-dark" role="button" href="{% url "news"%}">
+                    Новости
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-12 pt-lg-0 pt-3">
+                <a class="mx-3 text-dark" role="button" href="{% url "contacts"%}">
+                    Контакты
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-12 pt-lg-0 pt-3">
+                <a class="mx-3 text-dark" role="button" href="{% url "questions"%}">
+                    Вопрос-ответ
+                </a>
+            </div>
+            <div class="col-lg-2 col-12 pt-3">
+                <ul class="list-unstyled d-flex justify-content-lg-start justify-content-center">
+                    <li>
+                        <a class="mx-0" role="button" href="https://vk.com/rucolor2020"><img
+                                src="{% static 'img/vk.svg' %}" width="26" height="26"
+                                alt=""></a>
+                    </li>
+                    <li>
+                        <a class="mx-0" role="button" href="https://www.facebook.com/rucolor2020/"><img
+                                src="{% static 'img/instagram.svg' %}" width="26" height="26"
+                                alt=""></a>
+                    </li>
+                    <li>
+                        <a class="mx-0" role="button" href="https://www.facebook.com/rucolor2020/"><img
+                                src="{% static 'img/facebook.svg' %}" width="26" height="26"
+                                alt=""></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer Elements -->
+
+</footer>
+<!-- Конец подвала -->
 
 <script src="{% static "jquery/jquery-3.5.1.min.js" %}"></script>
 <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
