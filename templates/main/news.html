@@ -2,9 +2,76 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container">
         <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
             Новости
+        </div>
+        {% for post in page_obj %}
+            <div class="card border-0">
+                <div class="row">
+                    <div class="col-lg-5 col-12 pl-0">
+                        <img src="{{ post.image.url }}" class="rounded" alt="..." height="250px" width="100%">
+                    </div>
+                    <div class="col-lg-7 col-12" style="height: 250px;">
+                        <div class="row align-content-start d-flex flex-wrap" style="height: 220px">
+                            <div class="font-weight-bold" style="font-size: 33px">{{ post.title }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="card-text" style="font-size: 18px">
+                                {{ post.published_date.date }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 text-justify">
+                    <div class="card-text" style="font-size: 22px">
+                        {% autoescape off %}
+                            {{ post.body }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+
+        <div class="mx-auto" style="width: 200px;">
+            <ul class="pagination">
+                <li class="page-item">
+                    {% if page_obj.has_previous %}
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    {% else %}
+                        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    {% endif %}
+                </li>
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link"
+                                             href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                    </li>
+                {% endif %}
+                <li class="page-item"><a class="page-link"
+                                         href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+                </li>
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link"
+                                             href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+                    </li>
+                {% endif %}
+                <li class="page-item">
+                    {% if page_obj.has_next %}
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    {% else %}
+                        <a class="page-link" href="?page=1" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
         </div>
     </div>
 {% endblock %}
