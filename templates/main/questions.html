@@ -3,8 +3,103 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
+        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px; color:#2F347E">
             Вопрос-ответ
+        </div>
+    </div>
+    <div class="container">
+        <div id="accordion">
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header text-decoration-none" id="headingOne" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne" style="color: #fff; text-transform: uppercase;">
+                            КАК ПРИНЯТЬ УЧАСТИЕ В КОНКУРСЕ?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Необходимо подать заявку на участие на нашем сайте в разделе "Регистрация"
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header" id="headingTwo" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo" style="color: #fff; text-transform: uppercase;">
+                            ЧТО МНЕ ДАСТ УЧАСТИЕ В ЭТОМ КОНКУРСЕ?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Это зависит от вас
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header" id="headingThree" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree" style="color: #fff; text-transform: uppercase;">
+                            КТО МОЖЕТ УЧАСТВОВАТЬ В ЭТОМ КОНКУРСЕ?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Студенческие самоуправления
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header" id="headingFour" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour" style="color: #fff; text-transform: uppercase;">
+                            МОГУ ЛИ Я ПРИНЯТЬ УЧАСТИЕ В КОНКУРСЕ, ЕСЛИ НЕ ПРОХОЖУ ПО ОДНОМУ ИЗ ТРЕБОВАНИЙ КОНКУРСА?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Нет. Или да.
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header" id="headingFive" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseFive" style="color: #fff; text-transform: uppercase;">
+                            ДОЛЖЕН ЛИ Я ЗАПЛАТИТЬ ЗА УЧАСТИЕ В КОНКУРСЕ?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Участие в конкурсе бесплатно
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2" style="border: 2px solid #2D4AA7">
+                <div class="card-header" id="headingSix" style="background-color: #2D4AA7; color: #fff">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                aria-expanded="false" aria-controls="collapseSix" style="color: #fff; text-transform: uppercase;">
+                            ГДЕ ПОСМОТРЕТЬ ТРЕБОВАНИЯ К КАНДИДАТАМ? ГДЕ ПОСМОТРЕТЬ УСЛОВИЯ КОНКУРСА?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        На нашем сайте в разделе "О конкурсе"
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
