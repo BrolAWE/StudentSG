@@ -4,6 +4,8 @@ from django.core.paginator import Paginator
 # Create your views here.
 from core.models import Post
 
+from django.http import Http404
+
 
 def index(request):
     posts = Post.objects.all()
@@ -26,6 +28,16 @@ def news(request):
     page_obj = paginator.get_page(page_number)
     return render(request, 'main/news.html', context={
         'page_obj': page_obj,
+    })
+
+
+def news_item(request, pk):
+    try:
+        post_item = Post.objects.get(code=pk)
+    except Post.DoesNotExist:
+        raise Http404()
+    return render(request, 'main/news_item.html', context={
+        'post_item': post_item
     })
 
 
