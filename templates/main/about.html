@@ -38,8 +38,98 @@
         <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
             Треки конкурса
         </div>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Волонтёрство
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                     data-parent="#accordionExample">
+                    <div class="card-body">
+                        Некоторый заполнитель для первой панели аккордеона. Эта панель отображается по умолчанию
+                        благодаря классу <code>.show</code>.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Спортивные мероприятия
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Некоторый заполнитель для второй панели аккордеона. По умолчанию эта панель скрыта.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Гражданско-патриотическое воспитание
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        И, наконец, заполнитель для третьей и последней панели аккордеона. По умолчанию эта панель
+                        скрыта.
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
             Регламентирующие документы
         </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-2 col-2">
+                <img src="{% static 'img/doc.svg' %}" class="ml-lg-0 pl-lg-0" style="height: 80px; width: 80px"
+                     alt="doc">
+            </div>
+            <div class="col-lg-5 col-10 pl-5 pl-lg-0">
+                <div class="row" style="font-size: 22px">
+                    Abstract Template_RUcolor2020_RU_new.doc
+                </div>
+                <div class="row d-flex flex-wrap align-content-end" style="height: 50px">
+                    <a href="{% static 'download/Abstract Template_RUcolor2020_RU_new.doc' %}"
+                       class="btn btn-outline-dark btn-info" download>Скачать</a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 mt-lg-0 mt-3" style="font-size: 22px">
+                Образец оформления тезисов на русском
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-2 col-2">
+                <img src="{% static 'img/doc.svg' %}" class="ml-lg-0 pl-lg-0" style="height: 80px; width: 80px"
+                     alt="doc">
+            </div>
+            <div class="col-lg-5 col-10 pl-5 pl-lg-0">
+                <div class="row" style="font-size: 22px">
+                    Abstract Template_RUcolor2020_RU_new.doc
+                </div>
+                <div class="row d-flex flex-wrap align-content-end" style="height: 50px">
+                    <a href="{% static 'download/Abstract Template_RUcolor2020_RU_new.doc' %}"
+                       class="btn btn-outline-dark btn-info" download>Скачать</a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 mt-lg-0 mt-3" style="font-size: 22px">
+                Образец оформления тезисов на русском
+            </div>
+        </div>
+
     </div>
 {% endblock %}
