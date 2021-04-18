@@ -13,6 +13,24 @@ class Participant(models.Model):
                                   verbose_name="Имя на русском")
     second_name = models.CharField(max_length=100,
                                    verbose_name="Отчество", blank=True)
+    email = models.EmailField(max_length=100,
+                              verbose_name="Email", blank=True)
+    phone = models.CharField(max_length=100,
+                             verbose_name="Телефон", blank=True)
+    city = models.CharField(max_length=100,
+                            verbose_name="Город", blank=True)
+    organization = models.CharField(max_length=100,
+                                    verbose_name="Образовтательная организация", blank=True)
+    nomination = models.CharField(max_length=100,
+                                  verbose_name="Номинация", blank=True)
+    file = models.CharField(max_length=100,
+                            verbose_name="Файл", blank=True)
+    brief = models.TextField(max_length=5000,
+                             verbose_name="Текст письма", blank=True)
+    site = models.CharField(max_length=100,
+                            verbose_name="Ссылка на сайт", blank=True)
+    video = models.CharField(max_length=100,
+                             verbose_name="Ссылка на сайт", blank=True)
 
 
 class Post(models.Model):
