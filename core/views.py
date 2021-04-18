@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.core.paginator import Paginator
 
 # Create your views here.
+from core.forms import RegistrationForm
 from core.models import Post
 
 from django.http import Http404
@@ -50,4 +51,7 @@ def questions(request):
 
 
 def registration(request):
-    return render(request, 'main/registration.html')
+    form = RegistrationForm()
+    return render(request, 'main/registration.html', context={
+        'form': form,
+    })
