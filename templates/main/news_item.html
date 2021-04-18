@@ -3,11 +3,18 @@
 
 {% block content %}
     <div class="container">
-        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
+        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px;color:#2F347E">
             Новости
         </div>
         <div class="card border-0" style="height: 456px">
             <img src="{{ post_item.image.url }}" style="height: 456px" alt="">
+        </div>
+        <div class="content">
+            <h5 class="mt-5 text-lg-left text-center font-weight-bold "style="font-size: 33px; line-height:40px; color: #2A303E">{{post_item.title}}</h5>
+            <p class="mt-2" style="font-size: 18px; line-height:24px ; color: #2A303E">{{post_item.published_date}}</p>
+            <div class="mt-4" style="font-size: 22px;line-height:32px; color: #18191C">
+            {{post_item.body}}
+            </div>
         </div>
     </div>
 {% endblock %}
