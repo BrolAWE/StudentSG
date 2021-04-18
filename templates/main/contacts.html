@@ -2,9 +2,48 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
+    <div class="container-md-5">
+        <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px; color:#2F347E">
             Контакты
+        </div>
+        <div class="cards" style="font-size: 22px;">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-lg-5 mt-0">
+                    <div class="card text-center" style="height: 128px;border-radius: 8px; border-color:#2F347E">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Телефон поддержки</h5>
+                            <p class="card-text">+7(000)-000-00-00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 mt-2 mt-lg-0">
+                    <div class="card text-center" style="height: 128px;border-radius: 8px; border-color:#2F347E">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">E-mail</h5>
+                            <p class="card-text">student government@mail.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+            <!--div class="row mt-3 ml-8 mr-8"-->
+                <div class="col-12 col-lg-5 mt-2 mt-lg-3">
+                    <div class="card text-center" style="height: 128px;border-radius: 8px; border-color:#2F347E">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Адрес</h5>
+                            <p class="card-text">г. Смоленск, ул. Пржевальского, д.4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 mt-2 mt-lg-3">
+                    <div class="card text-center" style="height: 128px;border-radius: 8px; border-color:#2F347E">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Организатор конкурса</h5>
+                            <p class="card-text">+7(000)-000-00-00 - Игорь Иванович Цветков</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
