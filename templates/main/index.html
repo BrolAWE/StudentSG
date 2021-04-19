@@ -6,12 +6,17 @@
         <img src="{% static 'img/main_poster.jpg' %}" style="height: 456px" alt="">
     </div>
     <div class="container">
+        <div class="row text-center" style="margin-top:56px; font-size: 33px; color: #2F347E">
+            «Студенческое самоуправление» — это открытый конкурс для руководителей нового поколения. Не упустите
+            возможность попасть в сообщество лидеров, которые определят будущее России.
+        </div>
+    </div>
+    <div class="card border-0" style="height: 1000px">
+        <img src="{% static 'img/info.png' %}" style="height: 1000px" alt="">
+    </div>
+    <div class="container">
         <div class="col-md-12">
-            <div class="row text-md-center">
-                «Студенческое самоуправление» — это открытый конкурс для руководителей нового поколения. Не упустите
-                возможность попасть в сообщество лидеров, которые определят будущее России.
-            </div>
-            <div class="text-center font-weight-bold mb-4 mt-2" style="font-size: 40px">
+            <div class="text-center font-weight-bold mb-4 mt-2" style="color: #2F347E; font-size:40px">
                 Новости
             </div>
             {% for post in page_obj %}
@@ -19,25 +24,25 @@
                     <div class="row">
                         <div class="col-lg-5 col-12 pl-0">
                             <a href="{% url "news_item" post.code %}">
-                                <img src="{{ post.image.url }}" class="rounded" alt="..." height="250px" width="100%">
+                                <img src="{{ post.image.url }}" class="rounded" alt="..." height="184px" width="100%">
                             </a>
                         </div>
-                        <div class="col-lg-7 col-12" style="height: 250px;">
-                            <div class="row align-content-start d-flex flex-wrap" style="height: 220px">
-                                <div class="font-weight-bold" style="font-size: 33px">{{ post.title }}</div>
+                        <div class="col-lg-7 col-12">
+                            <div class="row align-content-start d-flex flex-wrap">
+                                <div class="font-weight-bold" style="font-size: 24px">{{ post.title }}</div>
                             </div>
-                            <div class="row">
-                                <div class="card-text" style="font-size: 18px">
+                            <div class="row" style="font-size: 18px; margin-top: 16px">
+                                <div class="card-text">
                                     {{ post.published_date.date }}
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3 text-justify">
-                        <div class="card-text" style="font-size: 22px">
-                            {% autoescape off %}
-                                {{ post.body }}
-                            {% endautoescape %}
+                            <div class="row text-align"
+                                 style="color:#2A303E; font-size: 15px; line-height: 32px; margin-top: 56px">
+                                <button type="button" class="btn btn-outline-primary"
+                                        style="height: 32px; width: 127px; ">
+                                    Подробнее >
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
