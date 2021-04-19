@@ -11,25 +11,25 @@
                 <div class="row">
                     <div class="col-lg-5 col-12 pl-0">
                         <a href="{% url "news_item" post.code %}">
-                            <img src="{{ post.image.url }}" class="rounded" alt="..." height="250px" width="100%">
+                            <img src="{{ post.image.url }}" class="rounded" alt="..." height="184px" width="100%">
                         </a>
                     </div>
-                    <div class="col-lg-7 col-12" style="height: 250px;">
-                        <div class="row align-content-start d-flex flex-wrap" style="height: 220px">
-                            <div class="font-weight-bold" style="font-size: 33px">{{ post.title }}</div>
+                    <div class="col-lg-7 col-12">
+                        <div class="row align-content-start d-flex flex-wrap">
+                            <div class="font-weight-bold" style="font-size: 24px">{{ post.title }}</div>
                         </div>
-                        <div class="row">
-                            <div class="card-text" style="font-size: 18px">
+                        <div class="row" style="font-size: 18px; margin-top: 16px">
+                            <div class="card-text">
                                 {{ post.published_date.date }}
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-3 text-justify">
-                    <div class="card-text" style="font-size: 22px">
-                        {% autoescape off %}
-                            {{ post.body }}
-                        {% endautoescape %}
+                        <div class="row text-align"
+                             style="color:#2A303E; font-size: 15px; line-height: 32px; margin-top: 56px">
+                            <a href="{% url "news_item" post.code %}" class="btn btn-outline-primary"
+                               style="height: 32px; width: 127px;">
+                                Подробнее >
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
